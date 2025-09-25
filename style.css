@@ -87,6 +87,7 @@ body {
     font-style: italic;
     z-index: 12; /* Texto encima de todo */
     position: relative;
+    font-size: 30px;
 }
 #invitacion {
     display: none;
@@ -126,15 +127,12 @@ body {
   }
 /* Tamaños grandes que se adaptan */
 .section-main .texto-sobre-foto h1 {
-    font-size: 40px;
-    margin-top: -315px;
+    font-size: 45px;
+    margin-top: -250px;
 }
 .section-main .texto-sobre-foto h2 {
     white-space: nowrap;      /* 1 sola línea */
     font-size: 50px;
-}
-.section-main .texto-sobre-foto h3 {
-    font-size:50px;
 }
 .section-main .texto-sobre-foto {
     position: absolute;
@@ -145,49 +143,21 @@ body {
     z-index: 2;
     max-width: 95%; /* evita que el texto se salga de la foto */
 }
+/*NUEVOS ESTILOS*/
 /*secciones generales*/
 .section , .section-playlist, .section-filter, .section-quote{
     padding: 0;
     transform: translateY(20px);
     animation: fadeIn var(--scroll-animation-duration) ease-in forwards;
-}
-/*sección countdown*/
-.section-countdown {
-    position: relative;
-    background-image: url('/imagenes/vela-2.png'); /* cambia por tu imagen */
-    background-size: cover; /* cubre toda el área */
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 40px 20px; /* da aire al contenido */
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: -30px;
-}
-.section-countdown::before {
-    content: "";
-    position: absolute;
-    top: 0; 
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.15); /* capa translúcida para legibilidad */
-    z-index: 0;
-}
-.section-countdown * {
-    position: relative; /* mantiene el texto sobre el fondo */
-    z-index: 1;
-}
-/*dorado*/
-.section-countdown h1, p, .countdown-circle span, .section-music h2, .section-quote h1{
+  }
+  /*dorado*/
+  .section-countdown h1, p, .countdown-circle span, .section-music h2, .section-quote h1{
     background: linear-gradient(to right,  #7a1212,#B22222, #d43c3c ,#B22222, #7a1212);
     -webkit-background-clip: text;
     color: transparent;
     animation: shine 1.5s infinite linear;
-}
-.section-countdown h1 {
+  }
+  .section-countdown h1 {
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
     font-family: var(--font-text);
     font-size: 42px;
@@ -196,16 +166,16 @@ body {
     padding: 10px;
     margin-top: -70px;
     margin-bottom: 0;
-}
-.section-countdown p {
+  }
+  .section-countdown p {
     margin: 0;
     font-family: var(--font-text);
     font-weight: 400;
     font-style: italic;
     font-size: 24px;
     padding: 7px;
-}
-.section-countdown h2 {
+  }
+  .section-countdown h2 {
     color: var(--color-2);
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
     font-family: var(--font-text);
@@ -214,15 +184,16 @@ body {
     font-style: italic;
     padding: 5px;
     margin: 0;
-}
-#contador{
+  }
+  #contador{
     display: flex;
     gap: 15px;
     justify-content: center;
     margin-top: 20px;
     padding: 0;
-}
-.countdown-circle {
+    margin-bottom: 20px;
+  }
+  .countdown-circle {
     width: 75px;
     height: 75px;
     background:#ffffff91;
@@ -232,15 +203,15 @@ body {
     justify-content: center;
     align-items: center;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-}
-.countdown-circle span {
+  }
+  .countdown-circle span {
     font-size: 18px;
     font-weight: 400;
     padding: 0;
     font-family: var(--font-text);
     font-style: italic;
-}
-.section-calendar {
+  }
+  .section-calendar {
     padding: 10px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
     width: 180px;
@@ -250,59 +221,85 @@ body {
     border-radius: 10px;
     background-color: #ffffff91;
     cursor: pointer;
-}
-.section-calendar a {
+  }
+  .section-calendar a {
     text-decoration: none;
     font-family: var(--font-text);
     color: var(--color-2);
     font-style: italic;
     font-size: 1.2em;
-}
-.section-calendar:hover {
+  }
+  .section-calendar:hover {
     background-color: var(--color-2);
-}
-.section-calendar a:hover {
+  }
+  .section-calendar a:hover {
     color: white;
-}
-/*section music*/
-.section-music {
-    background-image: url('/imagenes/play.png'); /* cambia por tu imagen */
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 300px;
-    z-index: -2;
-    box-sizing: border-box;
-    margin-top: -100px;
-    margin-bottom: -50px;
-}
-.section-music * {
+  }
+  .section-music * {
     position: relative;
     z-index: 1; /* mantiene texto y audio encima */
-}
-.section-music h2{
+  }
+  .section-music h2{
     font-family: var(--font-text);
     font-size: 20px;
     font-weight: 400;
     font-style: italic;
-}
-/*section blessed*/
-.section-b {
+  }
+  /* ====== AÑADIDOS PARA USAR IMG SIN RECORTE EN LA NUEVA SECCIÓN ====== */
+  .section-celebration{
     position: relative;
     width: 100%;
-    height: 400px;
+    min-height: 100vh;           /* alto pantalla */
+    overflow: hidden;
+    margin-top: -50px;
+  }
+  .section-celebration > .celebration-bg{
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: 100%;                /* prioriza alto del viewport */
+    object-fit: contain;         /* nunca recorta */
+    object-position: center;
+    z-index: 0;
+    pointer-events: none;
+  }
+  /* Contenido encima usando tus estilos de .section-countdown */
+  .section-celebration > .section-countdown.celebration-overlay{
+    position: absolute;
+    inset: 0;
+    display: flex;               /* respeta layout vertical */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+  }
+  /* En esta sección, anulamos el fondo y overlay de .section-countdown */
+  .section-celebration .section-countdown{ background-image: none !important; }
+  .section-celebration .section-countdown::before{ background: none !important; }
+  /* Y quitamos el fondo de .section-music solo dentro de esta sección */
+  .section-celebration .section-music{
+    background-image: none !important;
+    z-index: 1;                  /* sin z-index negativo aquí */
+  }
+/*fin nuevos estilos*/
+/*section blessed*/
+.section-bless-invite {
+    background-image: url('/imagenes/papas-invi.png'); /* Cambia la ruta */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: -50px;
+  }  
+.section-b {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    background-image: url('/imagenes/reloj-2.png'); /* Cambia por tu imagen */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -311,9 +308,10 @@ body {
     font-family: var(--font-text);
     font-style: italic;
     font-weight: 400;
-    font-size: 28px;
-    margin-top: -60px;
-    background: linear-gradient(to right,  #7a1212,#B22222, #d43c3c ,#B22222, #7a1212);
+    font-size: 30px;
+    padding: 15px;
+    margin-top: 250px;
+    background: linear-gradient(to right, #7a1212, #B22222, #d43c3c, #B22222, #7a1212);
     -webkit-background-clip: text;
     color: transparent;
     animation: shine 1.5s infinite linear;
@@ -330,22 +328,6 @@ body {
     -webkit-background-clip: text;
     color: transparent;
     animation: shine 1.5s infinite linear;
-}
-.section-invi {
-    position: relative;
-    width: 100%;
-    height: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    background-image: url('/imagenes/fondo-pringas.png'); /* Cambia por tu imagen */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin-top: -50px;
-    z-index: -2;
 }
 .section-invi h1{
     font-family: var(--font-text);
@@ -415,20 +397,16 @@ body {
     background-position: center;
     background-repeat: no-repeat;
 }
-.section-iti{
-    position: relative;
-    width: 100%;
-    height: 600px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    background-image: url('/imagenes/fondo-bella.png'); /* Cambia por tu imagen */
+.section-iti {
+    background-image: url('/imagenes/iti.png'); /* 👉 Cambia esta ruta */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-}
+    padding: 60px 20px;
+    color: white; /* O el color que dé mejor contraste */
+    position: relative;
+    z-index: -1;
+}  
 .section-playlist{
     position: relative;
     width: 100%;
@@ -443,48 +421,48 @@ body {
     background-position: center;
     background-repeat: no-repeat;
 }
-.section-filter{
-    position: relative;
-    width: 100%;
-    height: 500px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    background-image: url('/imagenes/fondo-bella-bestia.png'); /* Cambia por tu imagen */
+.section-memories {
+    background-image: url('/imagenes/iti.png'); /* Cambia por tu imagen */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    margin-top: -100px;
-}
-/* Sección Álbum Digital */
-.album-section {
+    padding: 60px 20px;
+    text-align: center;
     position: relative;
-    width: 100%;
-    height: 600px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    background-image: url('/imagenes/fondo-pringas.png'); /* Cambia por tu imagen */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin: 0; /* consistente con tus section */
+    z-index: -1;
   }
-.album-section .album-qr {
-    width: 260px;
-    max-width: 70vw;
-    height: auto;
+  .section-memories::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 0;
+  }
+  .memories-content {
+    position: relative;
+    z-index: 1;
+    max-width: 850px;
+    margin: 0 auto;
+  }
+  .section-memories p {
+    font-family: var(--font-text);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 24px;
+    padding: 5px;
+    background: linear-gradient(to right,  #7a1212,#B22222, #d43c3c ,#B22222, #7a1212);
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: shine 1.5s infinite linear;
+    margin-bottom: 50px;
+  }
+  .album-qr {
+    width: 270px;
+    margin: 20px auto;
     display: block;
-    margin: 0 auto 16px;
-    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.15));
-    border-radius: 8px; /* opcional si el QR tiene fondo blanco */
+    border-radius: 12px;
   }
   /* Botón de subir (usa tu misma estética de botones) */
-.album-section .upload-btn {
+.upload-btn {
     background-color:var(--color-2);
     color: #fff;
     border-radius: 5px;
@@ -492,14 +470,13 @@ body {
     padding: 10px;
     transition: background-color 0.3s;
     border: none;
-    font-size: 1em;
+    font-size: 1.2em;
     text-transform: none;
     margin-bottom: 20px;
     font-style: italic;
-    font-size: 1.2em;
     text-decoration: none;
 }
-.album-section .upload-btn:hover {
+.upload-btn:hover {
     background-color: #d4af37;
     color: white;
 }
@@ -513,13 +490,13 @@ body {
 .section-quote{
     position: relative;
     width: 100%;
-    height: 510px;
+    height: 650px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    background-image: url('/imagenes/fondo-castillo.png'); /* Cambia por tu imagen */
+    background-image: url('/imagenes/final.png'); /* Cambia por tu imagen */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -536,7 +513,7 @@ body {
     top: 18%;
     font-size: 50px;
 }
-.section-invi h2, .section-playlist h2, .section-gifts h2, .section h3, .section-filter h3, .section h2, .section-rsvp h3,.section-iti h2, .section-dresscode h2, .album-section h3{
+.section-invi h2, .section-playlist h2, .section-gifts h2, .section h3, .section-filter h3, .section h2, .section-rsvp h3,.section-iti h2, .section-dresscode h2, .album-section h3, .section-memories h3{
     font-family: var(--font-title);
     padding: 10px;
     font-weight: 400;

@@ -7,12 +7,11 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="Mis Quince Margiory">
     <meta property="og:description" content="Te invito a mis quince, con amor Margiory.">
-    <meta property="og:image" content="https://images.pexels.com/photos/33435676/pexels-photo-33435676.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="/style.css">
     <link rel="preload" href="/imagenes/sobre.png" as="image">
     <link rel="preload" href="/imagenes/fondo-pringas.png" as="image">
-    <link rel="preload" href="/imagenes/foto-bella.png" as="image">
+    <link rel="preload" href="/imagenes/portada.png" as="image">
      <!-- Preconnect and Load Fonts -->
      <link rel="preconnect" href="https://fonts.googleapis.com">
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,60 +32,62 @@
         <!--Header-->
         <!-- Sección de Foto con imagen sintillo y textos encima -->
         <div class="section-main fade-in-element">
-    <img src="/imagenes/foto-bella.png" alt="Foto de la quinceañera" width="100%" loading="lazy">
+    <img src="/imagenes/portada.png" alt="Foto de la quinceañera" width="100%" loading="lazy">
     <!-- Textos sobre la imagen -->
     <div class="texto-sobre-foto">
         <h1>Mis Quince</h1>
         <h2>Margiory</h2>
     </div>
         </div>
-        <!-- Contador de Fecha Regresiva -->
-        <div class="section-countdown fade-in-element">
-            <h1>¡Están invitados!</h1>
-            <p>Nos encanta que sean parte de este momento tan especial para nosotros.</p>
-            <h2>18. 10 . 2025</h2>
-            <div id="contador">
-                <div class="countdown-circle">
-                    <span id="dias">00</span>
-                    <span>días</span>
-                </div>
-                <div class="countdown-circle">
-                    <span id="horas">00</span>
-                    <span>horas</span>
-                </div>
-                <div class="countdown-circle">
-                    <span id="minutos">00</span>
-                    <span>minutos</span>
-                </div>
-                <div class="countdown-circle">
-                    <span id="segundos">00</span>
-                    <span>segundos</span>
-                </div>
+
+        <section class="section-celebration fade-in-element">
+            <!-- Fondo: imagen completa, sin recortes -->
+            <img class="celebration-bg" src="/imagenes/countdown.png" alt="Fondo invitación">
+          
+            <!-- Contenido superpuesto con tus estilos de .section-countdown -->
+            <div class="celebration-overlay section-countdown">
+              <h1>¡Están invitados!</h1>
+              <p>Nos encanta que sean parte de este momento tan especial para nosotros.</p>
+              <h2 class="celebration-date">18 . 10 . 2025</h2>
+          
+              <div id="contador" class="celebration-counter">
+                <div class="countdown-circle"><span id="dias">00</span><span>días</span></div>
+                <div class="countdown-circle"><span id="horas">00</span><span>horas</span></div>
+                <div class="countdown-circle"><span id="minutos">00</span><span>minutos</span></div>
+                <div class="countdown-circle"><span id="segundos">00</span><span>segundos</span></div>
+              </div>
+          
+              <!-- Usa tu clase original -->
+              <div class="section-music">
+                <h2>"If Only - Descendientes"</h2>
+                <audio id="musica" controls loop>
+                  <source src="/If Only (Instrumental) - Descendants 2 Karaoke.mp3" type="audio/mpeg">
+                  Tu navegador no soporta la reproducción de audio.
+                </audio>
+              </div>
             </div>
-        </div>  
-        <!-- Música de fondo -->
-        <div class="section-music fade-in-element">
-            <h2>"If Only - Descendientes"</h2>
-          <audio id="musica" controls loop>
-             <source src="/If Only (Instrumental) - Descendants 2 Karaoke.mp3" type="audio/mpeg">
-             Tu navegador no soporta la reproducción de audio.
-          </audio>
-        </div>   
-         <!-- Bendición de Padres -->
-         <div class="section-b fade-in-element">
-            <p>Con la bendición de Dios y de mis padres</p>
-            <h1>Abner Abdiel Quezada</h1>
-            <h2>&</h2>
-            <h1>Ada Karina Peña</h1>
-        </div>
-           <!-- Nombre de Invitados y Cantidad de Pases -->
-           <div class="section-invi fade-in-element">
-             <h1>Los invitamos con mucho cariño</h1>
-             <h3 id="nombreInvitado"></h3>
-             <h3 id="cantidadPases"></h3>
-           </div>
-                <!--div cerezo-->
-                <div class="section-cerezo1"></div>
+          </section>
+          
+<!-- Sección unificada: Bendición + Invitados -->
+<!-- Sección unificada con fondo completo -->
+<section class="section-bless-invite fade-in-element">
+      <!-- Bendición de Padres (tus estilos existentes) -->
+      <div class="section-b">
+        <p>Con la bendición de Dios y de mis padres</p>
+        <h1>Abner Abdiel Quezada</h1>
+        <h2>&</h2>
+        <h1>Ada Karina Peña</h1>
+      </div>
+  
+      <!-- Invitado y pases (tus estilos existentes) -->
+      <div class="section-invi">
+        <h1>Los invitamos con mucho cariño</h1>
+        <h3 id="nombreInvitado"></h3>
+        <h3 id="cantidadPases"></h3>
+      </div>
+  </section>
+        <!--div cerezo-->
+        <div class="section-cerezo1"></div>
         <!-- Confirmación -->
         <div class="section-rsvp fade-in-element">
             <h3>Confirmar Asistencia</h3>
@@ -102,8 +103,9 @@
             <button onclick="confirmarAsistencia()">Confirmar</button>
             <div id="confirmacion"></div>
         </div>
-                <!--div cerezo-->
-                <div class="section-cerezo1"></div>
+        <!--div cerezo-->
+        <div class="section-cerezo1"></div>
+
         <!-- Itinerario -->
         <div class="section-iti fade-in-element">
                      <!--card fiesta-->
@@ -151,52 +153,42 @@
            </div>
            </div>
         </div>
+
         <!--div cerezo-->
         <div class="section-cerezo1"></div>
-         <!-- Regalos -->
-         <div class="section-gifts fade-in-element">
-            <lord-icon class="icon-gift"
-             src="https://cdn.lordicon.com/kezeezyg.json"
-             trigger="loop"
-             delay="2000"
-             stroke="light"
-             colors="primary:#d4af37,secondary:#b22222"
-             style="width:200px;height:200px">
-            </lord-icon>
-            <h2>Lluvia de Sobres</h2>
-            <p>Lo que más queremos es compartir contigo nuestro gran día, pero agradecemos mucho el gesto de un obsequio. Tendremos un cofre en la entrada para que puedas dejar tu sobre con efectivo</p>
-            <p>¡Gracias!</p>
-        </div>
-                <!--div cerezo-->
-                <div class="section-cerezo1"></div>
          <!--dresscode-->
          <div class="section-dresscode fade-in-element">
             <h2>Dress Code</h2>
             <img src="/imagenes/dresscode.png" alt="Ícono de dress code" class="icono-section" loading="lazy"/>
             <p>Formal y elegante, no olvides abrigarte bien</p>
         </div>
-                <!--div cerezo-->
-                <div class="section-cerezo1"></div>
+        <!--div cerezo-->
+        <div class="section-cerezo1"></div>
          <!--filter-->
-         <section class="section-filter visible">
-            <lord-icon src="https://cdn.lordicon.com/wsaaegar.json"
-             trigger="loop" 
-             delay="2000" 
-             stroke="light" 
-             colors="primary:#d4af37,secondary:#b22222"
-             style="width:200px;height:200px"
-             ></lord-icon>
-            <h3>#misquincemargiory</h3>
-            <p>Subí tus fotos a Instagram con nuestro hashtag para convertir las memorias en eternas.</p>
+         <section class="section-memories fade-in-element visible">
+            <div class="memories-content">
+              <lord-icon 
+                src="https://cdn.lordicon.com/wsaaegar.json"
+                trigger="loop" 
+                delay="2000" 
+                stroke="light" 
+                colors="primary:#d4af37,secondary:#b22222"
+                style="width:200px;height:200px">
+              </lord-icon>
+          
+              <h3>#misquincemargiory</h3>
+              <p>Subí tus fotos a Instagram con nuestro hashtag para convertir las memorias en eternas.</p>
+          
+              <h3>¡Hagamos los recuerdos inolvidables!</h3>
+              <img src="/imagenes/QR-MARGIORY.png" alt="Código QR del álbum digital" class="album-qr">
+              <p>Escaneá el código QR o usá el botón para subir tus fotos</p>
+          
+              <a class="upload-btn" href="https://drive.google.com/drive/folders/1Yd4RrsBa6AIDG5QB7uZN9hd5cwXVsGQF?usp=drive_link" target="_blank" rel="noopener">
+                Subir Fotos
+              </a>
+            </div>
           </section>
-              <!--div cerezo-->
-    <div class="section-cerezo1"></div>
-         <section class="album-section fade-in-element visible">
-            <h3>¡Hagamos los recuerdos inolvidables!</h3>
-            <img src="/imagenes/QR-MARGIORY.png" alt="Código QR del álbum digital" class="album-qr">
-            <p>Escaneá el código QR o usá el botón para subir tus fotos</p>
-            <a class="upload-btn" href="https://drive.google.com/drive/folders/1Yd4RrsBa6AIDG5QB7uZN9hd5cwXVsGQF?usp=drive_link" target="_blank" rel="noopener">Subir Fotos</a>
-          </section>          
+                 
     <!--div cerezo-->
     <div class="section-cerezo1"></div>
     <!-- Sección: Buenos deseos -->
