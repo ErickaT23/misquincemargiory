@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="/style.css">
     <link rel="preload" href="/imagenes/sobre.png" as="image">
     <link rel="preload" href="/imagenes/fondo-pringas.png" as="image">
-    <link rel="preload" href="/imagenes/portada.png" as="image">
+    <link rel="preload" href="/imagenes/foto-portada.png" as="image">
      <!-- Preconnect and Load Fonts -->
      <link rel="preconnect" href="https://fonts.googleapis.com">
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -86,7 +86,6 @@
       <!-- Invitado y pases (tus estilos existentes) -->
       <div class="section-invi">
         <h1>Los invitamos con mucho cariño</h1>
-        <h3 id="nombreInvitado"></h3>
         <h3 id="cantidadPases"></h3>
       </div>
   </section>
@@ -114,47 +113,48 @@
         <div class="section-iti fade-in-element">
                      <!--card fiesta-->
            <div class="ceremonia fade-in-element">
-            <lord-icon
-             src="https://cdn.lordicon.com/fshosubk.json"
-             trigger="loop"
-             delay="2000"
-             stroke="light"
-             colors="primary:#d4af37,secondary:#b22222"
-             style="width:200px;height:200px">
-            </lord-icon>
-           <h2>Santa Misa</h2>
-           <p>Iglesia Parroquial Santa María Joyabaj</p>
-           <div class="details">
-            <div class="time-location">
-                <span class="date"> 18 Octubre</span>
-                <span class="separator">|</span>
-                <span class="time">16:00 hrs</span>
-            </div>
-        <p>Joyabaj, Quiché</p>
-        <button type="button" class="direction-button" onclick="abrirMapsMisa()">Cómo llegar</button>
+              <lord-icon
+               src="https://cdn.lordicon.com/fshosubk.json"
+               trigger="loop"
+               delay="2000"
+               stroke="light"
+               colors="primary:#d4af37,secondary:#b22222"
+               style="width:200px;height:200px">
+              </lord-icon>
+              <h2>Santa Misa</h2>
+              <p>Iglesia Parroquial Santa María Joyabaj</p>
+              <div class="details">
+                <div class="time-location">
+                  <span class="date"> 18 Octubre</span>
+                  <span class="separator">|</span>
+                  <span class="time">16:00 hrs</span>
+                </div>
+                <p>Joyabaj, Quiché</p>
+                <button type="button" class="direction-button" onclick="abrirMapsMisa()">Cómo llegar</button>
+              </div>
            </div>
-           </div>
+
          <!--card fiesta-->
            <div class="party fade-in-element">
-            <lord-icon
-             src="https://cdn.lordicon.com/nsgykrsg.json"
-             trigger="loop"
-             delay="2000"
-             stroke="light"
-             colors="primary:#d4af37,secondary:#b22222"
-             style="width:200px;height:200px">
-            </lord-icon>
-           <h2>Recepción</h2>
-           <p>Polideportivo Aldea Chuaquenum</p>
-           <div class="details">
-            <div class="time-location">
-                <span class="date"> 18 Octubre</span>
-                <span class="separator">|</span>
-                <span class="time">18:00 hrs</span>
-            </div>
-        <p>Aldea Chuaquenum, Joyabaj, Quiché</p>
-        <button type="button" class="direction-button" onclick="abrirMapsFiesta()">Cómo llegar</button>
-           </div>
+              <lord-icon
+                src="https://cdn.lordicon.com/nsgykrsg.json"
+                trigger="loop"
+                delay="2000"
+                stroke="light"
+                colors="primary:#d4af37,secondary:#b22222"
+                style="width:200px;height:200px">
+              </lord-icon>
+                <h2>Recepción</h2>
+                <p>Polideportivo Aldea Chuaquenum</p>
+                <div class="details">
+                  <div class="time-location">
+                      <span class="date"> 18 Octubre</span>
+                      <span class="separator">|</span>
+                      <span class="time">18:00 hrs</span>
+                  </div>
+                  <p>Aldea Chuaquenum, Joyabaj, Quiché</p>
+                  <button type="button" class="direction-button" onclick="abrirMapsFiesta()">Cómo llegar</button>
+                </div>
            </div>
         </div>
 
@@ -187,7 +187,7 @@
               <img src="/imagenes/QR-MARGIORY.png" alt="Código QR del álbum digital" class="album-qr">
               <p>Escaneá el código QR o usá el botón para subir tus fotos</p>
           
-              <a class="upload-btn" href="https://drive.google.com/drive/folders/1Yd4RrsBa6AIDG5QB7uZN9hd5cwXVsGQF?usp=drive_link" target="_blank" rel="noopener">
+              <a class="upload-btn" href="https://drive.google.com/drive/folders/1zPQya2mbdGvV3w6BsnpPrORObrwSKeKP?usp=drive_link" target="_blank" rel="noopener">
                 Subir Fotos
               </a>
             </div>
@@ -244,8 +244,8 @@
         </footer>
     </div>
     <script src="/invitados.js"></script>
-    <script src="/script.js"></script>
       <!-- Carga Firebase (modular) y lógica de deseos -->
   <script type="module" src="/firebase.js"></script>
+  <script src="/script.js"></script>
 </body>
 </html>
