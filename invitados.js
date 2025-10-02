@@ -1,5 +1,5 @@
 window.invitados = {
-  '1': { nombre: 'Lupita Marcia', pases: 2 },
+  '1': { pases: 2 },
 };
 
   
