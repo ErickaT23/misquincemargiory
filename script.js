@@ -105,7 +105,7 @@ window.abrirMapsMisa = () => {
 };
 
 window.abrirMapsFiesta = () => {
-  window.open('https://maps.app.goo.gl/qsgjfyQDpVMg4X2z5', '_blank', 'noopener,noreferrer');
+  window.open('https://maps.app.goo.gl/WVp8J1YUi8qheTsG7', '_blank', 'noopener,noreferrer');
 };
 
 function elegirAplicacionOtraDireccion() {
